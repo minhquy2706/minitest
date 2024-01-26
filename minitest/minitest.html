@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MINItest</title>
+</head>
+<body>
+<h1 ID="1"> S=a*b</h1>
+<label>số a<input type="number" id="2"> </label>
+<label>số b<input type="number" id="3"> </label>
+<button onclick="Ketqua()" id="4"> kết quả</button>
+</body>
+<script>
+    // Bài 1 câu lệnh để hiện thị hộp thoại là:
+    alert('Nguyễn Công Huân')
+    // Bài 2 câu lệnh nhận 1 giá trị từ 1 hộp thoại
+    let C= prompt('nhập số của bạn')
+    let D= C*C
+    alert('bình phương số của bạn là: '+D)
+    // Bài 3
+    // bước 1 nhập h1,input,button và đánh id cho từng cái
+    // Bước 2 Lấy giá tr về thông qua funtion và document.getElementById  và gán biến
+    //Bước 3 thực hiện tính toán và hiện thị kết quả
+
+    function Ketqua(){
+        let m1= document.getElementById("2").value
+        let m2= document.getElementById("3").value
+        let S= m1*m2
+        document.getElementById("1").innerHTML= "S=a*b=" +S
+        // bài 4 a.lấy kêt quả input của số a từ trên
+        let p= 4*m1
+        let DT=m1*m1
+        document.write('Chu vi hình vuông cạnh a là: '+ p)
+        document.write('   Diện tích hình vuông cạnh a là: '+ DT)
+       // b.tính a^2, b^2
+        let B= m1*m1
+        let B2= m2*m2
+        document.write('Bình phương số a là: '+ B)
+        document.write('Bình phương số b là: '+ B2)
+        //c,tinh tổng các số từ a đến b
+        let D1= (m1+m2)*((m2-m1)+1)/2
+        document.write('tổng các số từ a đến b là: ' +D1)
+        //d.nhập a là năm tính số thế kỉ
+        //e.i tam giác
+
+        let A1=prompt('số thứ 1 là:')
+        let B1=prompt('số thứ 2là:')
+        let C1=prompt('số thứ 3 là:')
+        if (A1>0 && B1>0 && C1>0){
+            if (A1+B1>C1){
+                document.write(+A1,+B1,+C1 + ' là cạnh của 1 hình tam giác')
+            }else if (B1+C1>A1){
+                document.write(+A1,+B1,+C1+ ' là cạnh của 1 hình tam giác')
+            }else if (A1+C1>B1){
+                document.write(+A1,+B1,+C1+ ' là cạnh của 1 hình tam giác')
+            }else{
+                document.write(+A1,+B1,+C1+ ' không phải là cạnh của 1 hình tam giác')
+            }
+        }else {
+            document.write(+A1,+B1,+C1+ 'không phải là cạnh của 1 hình tam giác')
+        }
+    }
+    //e.ii lấy dữ liệu từ câu trên e.i
+    //e.iii lấy dữ liệu A1,B1,C1 từ câu trên e.i tam giác đều
+    if (A1=B1=C1) {
+        document.write('là 1 tam giác đều')
+    }else {
+        document.write(' không phải là 1 tam giác đều')
+    }
+    //e.iv tam giác vuông lấy dữ liệu A1,B1,C1 từ câu trên e.i tam giác đều
+     let v1=A1*A1
+     let v2=B2*B2
+     let v3=C1*c1
+    if (v1+v2=v3){
+        document.write('là 1 tam giác vuông')
+    }esle if (v2+v3=v1){
+        document.write('là 1 tam giác vuông')
+    }else if (v3+v1=v2){
+        document.write('là 1 tam giác vuông')
+    }else {
+        document.write(' không phải là 1 tam giác vuông')
+    }
+</script>
+</html>
